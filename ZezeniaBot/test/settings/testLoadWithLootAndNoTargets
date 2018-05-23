@@ -1,0 +1,15 @@
+#waypoints
+W 100, 100, 7
+L 110, 100, 7
+W 120, 100, 6
+
+#looting
+395
+
+#targeting
+all
+
+#alarms
+1 P
+0 SPX
+4 SX

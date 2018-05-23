@@ -1,0 +1,37 @@
+LEGEND:
+* = definetly needs to be done.
+? = not sure if should be done.
+! = critical.
+
+ZenBot v1.0:
+
+OBLIGATORY:
+* DONE Displaying waypoints on minimap if user wants to.
+* DONE Insert waypoints to the list by default, after adding a new waypoint - select it.
+* DONE Fix the bug with targeting in CreaturesFrame.
+* DONE Make the Healing actually heal (requires reworked inventory).
+* DONE Make an option for food eating (possibly one checkbox in MainFrame) - requires reworked inventory.
+* DONE Re-work InventoryFrame to be more user-friendly (use buttons with icons?).
+* DONE Make the looting more advanced (search for an alternative container once the one used is full).
+* DONE Access to waypoints list should be synchronized in all sources.
+  Otherwise ConcurrentModificationException sometimes crashes the Cavebot (most often while setting waypoints)
+? DONE Creatures selected in CreaturesList should be highlighted on the minimap (lighter red color possibly).
+* DONE Cavebot: automatically eat from corpse.
+? DONE Hook up "Show waypoints" and "Eat food" with UserSettings.
+* DONE MainFrame: fix or remove the shortcuts.
+* DONE The future of logging in:
+    1st tab: bot account -> 2nd tab: char list + user/pass
+    char list -> direct login
+    user/pass -> dialog with character list (like it is now) -> world login
+* DONE Analyze and describe the "unknown packet of id 21" (note: it doesn't have to actually be a packet 21, might be an error while reading a merged packet).
+  This packet is sent when another player fights creatures and we see it.
+  Probably sent on creatures death. The error in reading this packet causes the creatures to not be removed from list -
+  - PacketReceiver is unable to reach CreatureDisappearPacket in such case (probably).
+* OBSOLETE Saving tiles in CavebotSettings.
+
+* Cavebot: Loot all except listed below
+
+
+
+ADDITIONAL:
+? Reading the .minimap format somehow... an option to set waypoints using this would be GREAT.
